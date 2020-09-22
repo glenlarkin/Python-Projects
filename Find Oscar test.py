@@ -2,8 +2,8 @@
 #Find Oscar Test.py - finds the name Oscar, in any case within a sentence
 
 import re
-def oscarFinder():              #need to make modular pls, accept string
-    text = re.compile(r'oscar', re.I)   #re.I makes it find any case
-    print(text.search('Where the fuck is Oscar? maybe hes hidden in this text'))
+def oscarFinder(oscar):                 #Accepts String from user to find oscar in
+    text = re.compile(r'oscar', re.I)   #re.I makes it find any case.
+    print(text.search(oscar))           #Takes text that user needs to find oscar in
 
-print(oscarFinder())
+print(oscarFinder('Where is my Oscar? I cant seem to find him'))
