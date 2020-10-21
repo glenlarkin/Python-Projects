@@ -1,5 +1,5 @@
 #! python 3
-# kingsWishes.py - Enter into an imaginary village of Kings, you're selling computers
+# castleChooser.py - Enter into an imaginary village of Kings, you're selling computers. Pick a castle
 import random
 import time
 
@@ -10,15 +10,15 @@ def displayIntro():
     The other castle has a medieval king that wants you to be dragon food.''')
 print()
 
-def chooseCave():
-    cave = ''
-    while cave != '1' and cave != '2':
-        print('Which cave will you go into? (1 or 2)')
-        cave = input()
+def chooseCastle():
+    castle = ''
+    while castle != '1' and castle != '2':
+        print('Which castle will you go into? (1 or 2)')
+        castle = input()
 
-    return cave
+    return castle
 
-def checkCave(chosenCave):
+def checkCastle(chosenCastle):
     print('You approach the castle...')
     time.sleep(2)
     print('It takes quite a while to climb the steps...')
@@ -31,7 +31,7 @@ def checkCave(chosenCave):
 
     friendlyKing = random.randint(1, 2)
 
-    if chosenCave == str(friendlyKing):
+    if chosenCastle == str(friendlyKing):
         print('"I want to buy the best model you got with all the storage, teraflops, and everything. \nGIVE IT TO MEEEEE DADDY \nYOU WIN')
     else:
         print("I'M GOING TO UNLEASH THE MOST AWFUL DRAGON ON YOUR SORRY BUTT \nYOU LOSE")
@@ -39,8 +39,8 @@ def checkCave(chosenCave):
 playAgain = 'yes'
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
-    caveNumber = chooseCave()
-    checkCave(caveNumber)
+    castleNumber = chooseCastle()
+    checkCastle(castleNumber)
 
     print('Do you want to play again? (yes or no)')
     playAgain = input()
