@@ -47,12 +47,16 @@ hangmen = ['''
  / \  |
      ===''']
 
-words = 'ant baboon badger bat bear beaver camel cat clam cobra cougar coyote crow deer dog donkey duck eagle ferret fox frog goat foose hawk lion lizard llama mole monkey moose mouse mule newt otter owl panda parrot pidgeon python rabbit ram rat raven rhino salmon seal shark sheep skunk sloth snake spider stork swan tiger roak trout turkey turtle weasel whale wolf wombat zebra'.split()
-
-def getRandomWord(wordList):    #returns a random string from the passed list of strings
-    wordIndex = random.randint(0, len(wordList) - 1)
-    return wordList[wordIndex]
-
+words = {'Colors':'red orange yellow green blue indigo violet white black brown'.split(),
+'Shapes':'square triangle rectangle circle ellipse rhombus trapezoid chevron pentagon hexagon septagon octagon'.split(),
+'Fruits':'apple orange lemon lime pear watermelon grape grapefruit cherry banana cantaloupe mango strawberry tomato'.split(),
+'Animals':'ant baboon badger bat bear beaver camel cat clam cobra cougar coyote crow deer dog donkey duck eagle ferret fox frog goat foose hawk lion lizard llama mole monkey moose mouse mule newt otter owl panda parrot pidgeon python rabbit ram rat raven rhino salmon seal shark sheep skunk sloth snake spider stork swan tiger roak trout turkey turtle weasel whale wolf wombat zebra'.split()
+}
+def getRandomWord(wordDict):    #returns a random string from the passed dictionary of lists of strings and its key.
+    wordKey = random.choice(list(wordDict.keys()))      #First, randomly select a key from the dictionary.
+    wordIndex = random.randint(0, len(wordDict[wordKey]) - 1)    #Second, randomly select a word from the key's list in the dictionary:
+    return [wordDict[wordKey][wordIndex], wordKey]
+    
 def displayBoard(missedLetters, correctLetters, secretWord):    #Incriments through each 6 of the 'hangmen' photos, as a letter is missed
     print(hangmen[len(missedLetters)])
     print()
@@ -86,12 +90,27 @@ def playAgain():    #Returns True if the player wants to play again
     return input().lower().startswith('y')
 
 print('H A N G M A N')
+
+difficulty = 'X'
+while difficulty not in ['E', 'M', 'H']:
+    print('Enter Difficulty: E - Easy, M - Medium, H - Hard')
+    difficulty = input().upper()
+if difficulty == 'M':
+    del hangmen[8]
+    del hangmen[7]
+if difficulty == 'H':
+    del hangmen[8]
+    del hangmen[7]
+    del hangmen[5]
+    del hangmen[3]
+
 missedLetters = ''
 correctLetters = ''
-secretWord = getRandomWord(words)
+secretWord, secretSet = getRandomWord(words)
 gameIsDone = False
 
 while True:
+    print('The secret word is in the set: ' + secretSet)
     displayBoard(missedLetters, correctLetters, secretWord)     #Let the player enter a letter.
     guess = getGuess(missedLetters + correctLetters)
 
@@ -118,6 +137,6 @@ while True:
             missedLetters = ''
             correctLetters = ''
             gameIsDone = False
-            secretWord = getRandomWord(words)
+            secretWord, secretSet = getRandomWord(words)
         else:
             break
