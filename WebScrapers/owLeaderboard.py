@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import docx
 
 # get the data for Overwatch leaderboards
 data = requests.get('https://overwatch.op.gg/leaderboards?platform=pc')
@@ -25,7 +26,7 @@ for tr in tbody.find_all('tr'):
     killDeath = tr.find_all('td')[5].find('b').text.strip()
     winPercent = tr.find_all('td')[6].find('b').text.strip()
     timePlayed = tr.find_all('td')[7].text.strip()
-    print(place, skillRating, gameLevel, killDeath, winPercent, percent, timePlayed )
-    f.write(place + ","  + skillRating + "," + gameLevel + "," + killDeath + "," + winPercent + " % ," + timePlayed + "\n")         #write results to products.csv
+    print(place, username, skillRating, gameLevel, killDeath, winPercent, percent, timePlayed )
+    f.write(place + "," + skillRating + "," + gameLevel + "," + killDeath + "," + winPercent + " % ," + timePlayed + "\n")         #write results to products.csv
 
 f.close()

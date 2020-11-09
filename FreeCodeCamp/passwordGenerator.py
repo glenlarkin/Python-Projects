@@ -41,6 +41,6 @@ def password(length,num=False,strength='weak'):
     random.shuffle(pwd)
     return''.join(pwd)
 
-print(password(5,num=True,strength='weak'))
-print(password(10,num=True,strength='strong'))
-print(password(15,num=True,strength='very'))
+print('Your Weak password is: ' + password(5,num=True,strength='weak'))
+print('Your Strong password is: ' + password(10,num=True,strength='strong'))
+print('Your Very Strong password is: ' + password(15,num=True,strength='very'))
