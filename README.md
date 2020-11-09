@@ -1,6 +1,6 @@
 # Python-Projects
-How to Scrape and automate finding text
+A collection of all of the Open Source Python code I have either modified or implemented
 
-Collection of projects inspired by Automate the Boring Stuff with Python: Practical Programming for Total Beginners, 2nd Edition - Al Sweigart
+Topics include: Document Modification, Input Validation, File generation, and Web Scrapers
 
-Modified and typed out by Glen Larkin
+
