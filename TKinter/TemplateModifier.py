@@ -29,7 +29,7 @@ root = tk.Tk()
 root.geometry("600x500")
 root.title('Cover Letter Generator')
 
-backgroundImage = tk.PhotoImage(file='C:/Users/glenl/Documents/GitHub/Python-Projects/TKinter/landscape.png')
+backgroundImage = tk.PhotoImage(file='/Users/sketchmaster/Documents/GitHub/Python-Projects/TKinter/landscape.png')
 backgroundLabel = tk.Label(root, image=backgroundImage)
 backgroundLabel.place(relheight=1, relwidth=1)
 
