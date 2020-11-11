@@ -10,7 +10,7 @@ def modifyDoc(companyName, positionName):
     contextDict = { 'todayDate': todayDate, 'companyName': companyName, 'postionName': positionName}
 
         # Open Master CoverLetter template  
-    doc = DocxTemplate("C:/Users/glenl/documents/github/coverletter/masterCoverLetter.docx")
+    doc = DocxTemplate("/Users/sketchmaster/Documents/GitHub/Python-Projects/TKinter/masterCoverLetter.docx")
 
         # Load Variable names into file and replace template
     doc.render(contextDict)
