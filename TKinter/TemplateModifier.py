@@ -20,10 +20,6 @@ def modifyDoc(companyName, positionName):
 
     path = Path.cwd()
     label['text'] = 'Success!\nYour Cover Letter has been created\nIt has been placed in: ' + str(path)
-    
-
-path = Path.cwd()
-print('Success!\nYour Cover Letter has been created\nIt has been placed in: ' + str(path))
 
 root = tk.Tk()
 root.geometry("600x500")
