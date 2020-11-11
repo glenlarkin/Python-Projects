@@ -1,3 +1,0 @@
-([('TemplateModifier',
-   '/Users/sketchmaster/Documents/GitHub/Python-Projects/TKinter/dist/TemplateModifier',
-   'EXECUTABLE')],)
