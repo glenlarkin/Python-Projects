@@ -1,4 +1,4 @@
 from pathlib import Path
 import os
 
-os.makedirs('C:\\delicious\\walnut\\waffles')
+os.makedirs('/Users/sketchmaster/butts/are/big')

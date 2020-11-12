@@ -32,8 +32,11 @@ backgroundLabel.place(relheight=1, relwidth=1)
 frame = tk.Frame(root, bg='#80c1ff', bd=5)
 frame.place(relx=0.5, rely=0.1, relwidth=0.74, relheight=0.2, anchor='n')
 
-companyLabel = tk.Label(frame, text='Company Name:').place(relheight=0.2, relwidth=0.3)
-postionLabel = tk.Label(frame, text='Postion:').place(relx=0.3, relheight=0.2, relwidth=0.3)
+companyLabel = tk.Label(frame, text='Company Name:')
+companyLabel.place(relheight=0.2, relwidth=0.3)
+
+postionLabel = tk.Label(frame, text='Postion:')
+postionLabel.place(relx=0.3, relheight=0.2, relwidth=0.3)
 
 companyEntry = tk.Entry(frame, justify='center')
 companyEntry.place(rely=0.25, relwidth=0.3, relheight=0.6)
