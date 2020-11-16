@@ -3,6 +3,7 @@ from docxtpl import DocxTemplate
 import datetime
 from pathlib import Path
 
+
 def modifyDoc(companyName, positionName):
     todayDate = datetime.datetime.today().strftime('%m/%d/%Y')
 
@@ -10,14 +11,14 @@ def modifyDoc(companyName, positionName):
     contextDict = { 'todayDate': todayDate, 'companyName': companyName, 'postionName': positionName}
 
         # Open Master CoverLetter template  
-    doc = DocxTemplate("/Users/sketchmaster/Documents/GitHub/Python-Projects/TKinter/masterCoverLetter.docx")
+    doc = DocxTemplate("C:/Users/glenl/Documents/GitHub/Python-Projects/TKinter/mainCoverLetter.docx")
 
         # Load Variable names into file and replace template
     doc.render(contextDict)
 
         # Save the file with Modified filename
     doc.save(companyName + '_' + positionName + '_CoverLetter.docx')
-
+    
     path = Path.cwd()
     label['text'] = 'Success!\nYour Cover Letter has been created\nIt has been placed in: ' + str(path)
 
@@ -25,7 +26,7 @@ root = tk.Tk()
 root.geometry("600x500")
 root.title('Cover Letter Generator')
 
-backgroundImage = tk.PhotoImage(file='/Users/sketchmaster/Documents/GitHub/Python-Projects/TKinter/landscape.png')
+backgroundImage = tk.PhotoImage(file='C:/Users/glenl/Documents/GitHub/Python-Projects/TKinter/landscape.png')
 backgroundLabel = tk.Label(root, image=backgroundImage)
 backgroundLabel.place(relheight=1, relwidth=1)
 
