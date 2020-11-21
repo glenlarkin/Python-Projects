@@ -25,5 +25,5 @@ daily = oneWeek / 7
 print('--------------------------------')
 
 print('$' + str(twoWeekTotal) + ' total earned')
-print('You may spend $' + str(daily) + ' each day')
-print('You have saved: $' + str(savings))
+print('If you spend $' + str(daily) + ' each day')
+print('You will have saved: $' + str(savings))
