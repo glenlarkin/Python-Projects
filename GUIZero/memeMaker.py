@@ -4,7 +4,7 @@ from guizero import App, TextBox, Drawing, Combo, Slider
 # Functions -------------
 def draw_meme():
     meme.clear()
-    meme.image(0, 0, "GUIZero/Pizza.png")
+    meme.image(0, 0, imageSelect.value)
     
     meme.text(
         20, 20, top_text.value,
@@ -23,6 +23,8 @@ app = App("Meme Generator")
 
 
 # Widgets ---------------
+imageSelect = TextBox(app, "GUIZero/Pizza.png", command=draw_meme)
+#imageSelect.width(30)
 top_text = TextBox(app, "top text", command=draw_meme)
 bottom_text = TextBox(app, "bottom text", command=draw_meme)
 
