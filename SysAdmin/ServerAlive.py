@@ -11,14 +11,14 @@ with open('SysAdmin/apwServers.csv') as csvfile:
     output = ''
 
     # Loop through CSV List
-    for row in newList:
-        ipAddr = row[0]
+    for column in newList:
+        ipAddr = column[0]
 
         # Ping each server
-        response = os.system('ping -c 2 ' + ipAddr)
+        response = os.system('ping ' + ipAddr)
         if response == 0:
             output += ipAddr + ' is up :)\n'
         else:
-            output += ipAddr + ', is down :(\n'
+            output += ipAddr + ' is down :(\n'
 
 print(output + 'have a nice day')
