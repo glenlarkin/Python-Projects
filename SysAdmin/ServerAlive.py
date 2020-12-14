@@ -16,12 +16,11 @@ with open('SysAdmin/larkinServers.csv') as csvfile:
         ipAddr = column[0]
 
         # Ping each server
-        response = os.system('ping -n 1 ' + ipAddr)
+        response = os.system('ping ' + ipAddr)
         if response == 0:
             print(response)
             output += ipAddr + ' is up :)\n'
         else:
-            print(response)
             output += ipAddr + ' is down :(\n'
 
 print(output + 'have a nice day')
