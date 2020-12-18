@@ -3,7 +3,7 @@
 
 import os, csv
 
-with open('SysAdmin/larkinServers.csv') as csvfile:
+with open('SysAdmin/apwServers.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
 
     # Convert Server IPs to list
@@ -21,6 +21,6 @@ with open('SysAdmin/larkinServers.csv') as csvfile:
             print(response)
             output += ipAddr + ' is up :)\n'
         else:
-            output += ipAddr + ' is down :(\n'
+            output += ipAddr + ' is unreachable :(\n'
 
 print(output + 'have a nice day')
