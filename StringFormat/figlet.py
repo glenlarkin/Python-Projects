@@ -1,6 +1,6 @@
 from pyfiglet import Figlet
 
-text = "Fuck"
+text = ".Chat"
 
 larry3d = Figlet(font='larry3d')
 print(larry3d.renderText(text))
