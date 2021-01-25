@@ -23,4 +23,4 @@ print(unreadThreads[0].messages[0].timestamp)
 print(unreadThreads[0].messages[0].sender)
 
 print(unreadThreads[0].messages[0].recipient)
-ezgmail.send('glenlarkin@gmail.com', 'You have ' + str(len(unreadThreads)) + ' unread thread(s) in your work email', 'Please read your unread threads from' + unreadThreads[0].messages[0].sender)
+ezgmail.send('glenlarkin@gmail.com', 'You have ' + str(len(unreadThreads)) + ' unread thread(s) in your work email', 'Please read your unread threads from ' + unreadThreads[0].messages[0].sender)
