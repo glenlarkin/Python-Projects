@@ -3,3 +3,7 @@
 *.pdf
 .DS_Store
 .vscode/settings.json
+credentials.json
+token.json
+AutoEmail/install.py
+AutoEmail/recipients.json
