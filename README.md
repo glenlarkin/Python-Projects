@@ -1,5 +1,5 @@
 # Python-Projects
-A collection of all of the Open Source Python code I have either modified or implemented
+A collection of all of the Open Source Python code I have tinkered around with to learn Python.
 
 Topics include: Document Modification, Input Validation, File generation, Web Scrapers, and Computer Games!
 
