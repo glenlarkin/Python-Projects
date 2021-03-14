@@ -1,4 +1,4 @@
-#! python3
+#!/usr/bin/python3
 #newEggGPUFinder - Scrapes NewEgg.com for featured deals on graphics cards
 
 from urllib.request import urlopen as uReq
