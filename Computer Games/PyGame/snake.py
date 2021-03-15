@@ -40,6 +40,7 @@ def gameLoop():
     foody = round(random.randrange(0, disWidth - snakeBlock) / 10.0)
 
     while not gameOver:
+
         while gameClose == True:
             dis.fill(white)
             message("You Lost! Press Q-Quit or C-Play Again", red)
@@ -47,10 +48,10 @@ def gameLoop():
 
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
-                    if event.type == pygame.K_q:
+                    if event.type == pygame.K_Q:
                         gameOver = True
                         gameClose = False
-                    if event.type == pygame.K_c:
+                    if event.type == pygame.K_C:
                         gameLoop()
 
         for event in pygame.event.get():
@@ -90,3 +91,5 @@ def gameLoop():
     quit()
 
 gameLoop()
+
+# https://www.edureka.co/blog/snake-game-with-pygame/
