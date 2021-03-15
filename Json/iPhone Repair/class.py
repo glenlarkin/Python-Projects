@@ -9,7 +9,7 @@ class iPhone:
 
     def matchUp(self):
         for items in data:
-            print(items[0])
+            print(data[0])
 
 test = iPhone("iPhone x", "display")
 test.matchUp()
