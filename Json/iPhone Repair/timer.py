@@ -9,5 +9,6 @@ def timer():
         print(start)
         if start == 60:
             complete = True
+    return start
 
 timer()

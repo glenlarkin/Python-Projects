@@ -1,4 +1,7 @@
 import Repair
 import json
+import timer
+import guizero
 
-print(Repair.test.name)
+print("are you ready to repair: ", Repair.test.name)
+timer()

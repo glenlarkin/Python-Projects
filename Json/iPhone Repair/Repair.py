@@ -12,7 +12,7 @@ class Repair:
 
     
 testSubject = iPhones[4]["name"]
-testRepair = iPhones[4]["repairs"][2]
+testRepair = iPhones[4]["repair"][2]
 
 test = Repair(testSubject, testRepair, '23', 'nothing')
 print(test.name, test.type)
