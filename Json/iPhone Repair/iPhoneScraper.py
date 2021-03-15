@@ -5,16 +5,16 @@ from urllib.request import urlopen as uReq
 import requests
 from bs4 import BeautifulSoup as soup
 
-myUrl = "https://support.apple.com/en-us/HT201296"
+data = requests.get("https://support.apple.com/en-us/HT201296")
 
 # opening up connection, grabbing the page
 #uClient = uReq(myUrl)
 #page_html = uClient.read()
 #uClient.close()
-page = requests.get(myUrl)
+soup = BeautifulSoup(data.text, 'html.parser')
 
 # Html parsing
-soup = soup(page.content, "html.parser")
+
 
 #grabs each iPhone
 containers = soup.find(id="sections")
@@ -22,6 +22,6 @@ container = containers.findAll('div')
 
 for data in container:
     iphoneName = data.find('h2', class_="")
-    specs = data.find('div')
+    specs = data.find_all('div')
     print(specs)
     
