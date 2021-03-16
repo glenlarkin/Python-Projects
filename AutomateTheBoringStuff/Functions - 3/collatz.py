@@ -13,4 +13,8 @@ def collatz(number):
 userNumber = input("Give me a number pls: ")
 
 while userNumber != 1:
-    userNumber = collatz(int(userNumber))
+    try:
+        userNumber = collatz(int(userNumber))
+    except:
+        print("Error: String was entered\nPlease enter a number")
+        userNumber = input("Error: Enter a NUMBER: ")
