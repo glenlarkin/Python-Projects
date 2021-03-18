@@ -11,7 +11,7 @@ def modifyDoc(companyName, positionName):
     contextDict = { 'todayDate': todayDate, 'companyName': companyName, 'postionName': positionName}
 
         # Open Master CoverLetter template  
-    doc = DocxTemplate("C:/Users/glenl/Documents/GitHub/Python-Projects/TKinter/mainCoverLetter.docx")
+    doc = DocxTemplate("CoverLetter/mainCoverLetter.docx")
 
         # Load Variable names into file and replace template
     doc.render(contextDict)
@@ -19,14 +19,14 @@ def modifyDoc(companyName, positionName):
         # Save the file with Modified filename
     doc.save(companyName + '_' + positionName + '_CoverLetter.docx')
     
-    path = Path.cwd()
-    label['text'] = 'Success!\nYour Cover Letter has been created\nIt has been placed in: ' + str(path)
+    exportPath = Path.cwd()
+    label['text'] = 'Success!\nYour Cover Letter has been created\nIt has been placed in: ' + str(exportPath)
 
 root = tk.Tk()
 root.geometry("600x500")
-root.title('Cover Letter Generator')
+root.title('Cover Letter Wizard')
 
-backgroundImage = tk.PhotoImage(file='C:/Users/glenl/Documents/GitHub/Python-Projects/TKinter/landscape.png')
+backgroundImage = tk.PhotoImage(file='CoverLetter/landscape.png')
 backgroundLabel = tk.Label(root, image=backgroundImage)
 backgroundLabel.place(relheight=1, relwidth=1)
 
