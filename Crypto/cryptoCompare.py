@@ -13,6 +13,7 @@ def priceFinder(token):
     print('The price of ' + name + ' is currently ' + '$' + str(price))
     print('-'*50)
     
-    
-
 priceFinder(ada)
+
+input = input('What coin would you like to check?\n')
+priceFinder(input.upper())
