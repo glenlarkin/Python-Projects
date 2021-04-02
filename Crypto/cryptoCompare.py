@@ -18,8 +18,6 @@ priceFinder(ada)
 input = input('What coin would you like to check?\n')
 priceFinder(input.upper())
 
-
-while True:
-    query = input('What Coin would you like to check')
-    priceFinder(query.upper())
-        
+while != 'exit':
+    priceFinder(input.upper())
+    continue
