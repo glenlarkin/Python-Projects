@@ -3,6 +3,7 @@ import cryptocompare
 usd = 'USD'
 ada = 'ADA'
 price = 0
+end = False
 
 def priceFinder(token):
     coinDict = cryptocompare.get_price(token, usd)
@@ -18,6 +19,5 @@ priceFinder(ada)
 input = input('What coin would you like to check?\n')
 priceFinder(input.upper())
 
-while input != 'exit':
-    priceFinder(input.upper())
-    continue
+cap = cryptocompare.get_avg(input, usd)
+print(cap)
