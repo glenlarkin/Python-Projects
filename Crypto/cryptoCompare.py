@@ -19,5 +19,5 @@ priceFinder(ada)
 input = input('What coin would you like to check?\n')
 priceFinder(input.upper())
 
-cap = cryptocompare.get_avg(input, usd)
-print(cap)
+#cap = cryptocompare.get_avg(input, usd)
+#print(cap)
