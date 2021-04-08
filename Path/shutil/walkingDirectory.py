@@ -3,7 +3,7 @@ from pathlib import Path
 
 p = Path.home()
 
-for folderName, subfolders, filenames in os.walk('/users/sketchmaster/documents/github/python-projects/path'):
+for folderName, subfolders, filenames in os.walk(p):
     print('the current folder is ' + folderName)
 
     for subfolder in subfolders:
