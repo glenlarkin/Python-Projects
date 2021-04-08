@@ -14,7 +14,7 @@ todayDate = datetime.datetime.today().strftime('%m/%d/%Y')
 contextDict = { 'todayDate': todayDate, 'companyName': companyName, 'postionName': positionName}
 
 # Open Master CoverLetter template
-doc = DocxTemplate("masterCoverLetter.docx")
+doc = DocxTemplate("CoverLetterTemp.docx")
 
 # Load Variable names into file and replace template
 doc.render(contextDict)

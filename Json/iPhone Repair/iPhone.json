@@ -1,0 +1,194 @@
+
+{
+    "iPhones": [
+        {
+            "id":"13,4",
+            "name":"iPhone 12 Pro Max",
+            "year introduced":2020,
+            "capacity":[128,256,512],
+            "color":["Silver","Graphite","Gold","Pacific Blue"],
+            "model":[{"United States":"A2342"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine","Rear System"]
+        },
+        {
+            "id":"13,3",
+            "name":"iPhone 12 Pro",
+            "year introduced":2020,
+            "capacity":[128,256,512],
+            "color":["Silver","Graphite","Gold","Pacific Blue"],
+            "model":[{"United States":"A2341"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine","Rear System"]
+        },
+        {
+            "id":"13,2",
+            "name":"iPhone 12",
+            "year introduced":2020,
+            "capacity":[64,128,256],
+            "color":["Black","White","(PRODUCT)RED","Green","Blue"],
+            "model":[{"United States":"A2172"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine","Rear System"]
+        },
+        {
+            "id":"13,1",
+            "name":"iPhone 12 mini",
+            "year introduced":2020,
+            "capacity":[64,128,256],
+            "color":["Black","White","(PRODUCT)RED","Green","Blue"],
+            "model":[{"United States":"A2176"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine","Rear System"]
+        },
+        {
+            "id":"12,8",
+            "name":"iPhone SE (2nd Generation)",
+            "year introduced":2020,
+            "capacity":[64,128,256],
+            "color":["Black","White","(PRODUCT)RED"],
+            "model":[{"United States":"A2275"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"12,3",
+            "name":"iPhone 11 Pro",
+            "year introduced":2019,
+            "capacity":[64,256,512],
+            "color":["Silver","Space Gray","Gold","Midnight Green"],
+            "model":[{"United States":"A2160"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"12,5",
+            "name":"iPhone 11 Pro Max",
+            "year introduced":2019,
+            "capacity":[64,256,512],
+            "color":["Silver","Space Gray","Gold","Midnight Green"],
+            "model":[{"United States":"A2161"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"12,1",
+            "name":"iPhone 11",
+            "year introduced":2019,
+            "capacity":[64,128,256],
+            "color":["Purple","Green","Yellow","Black","White","(PRODUCT)RED"],
+            "model":[{"United States":"A2111"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"11,2",
+            "name":"iPhone XS",
+            "year introduced":2018,
+            "capacity":[64,256,512],
+            "color":["Silver","Space Gray","Gold"],
+            "model":[{"United States":"A1920"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"11,6",
+            "name":"iPhone XS Max",
+            "year introduced":2018,
+            "capacity":[64,256,512],
+            "color":["Silver","Space Gray","Gold"],
+            "model":[{"United States":"A1921"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"11,8",
+            "name":"iPhone XR",
+            "year introduced":2018,
+            "capacity":[64,128,256],
+            "color":["Black","White","Blue","Yellow","Coral","(PRODUCT)RED"],
+            "model":[{"United States":"A1984"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"10,3",
+            "name":"iPhone X",
+            "year introduced":2017,
+            "capacity":[64,256],
+            "color":["Silver","Space Gray"],
+            "model":[{"United States":"A1865"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"10,1",
+            "name":"iPhone 8",
+            "year introduced":2017,
+            "capacity":[64,128,256],
+            "color":["Gold","Silver","Space Gray","(PRODUCT)RED"],
+            "model":[{"United States":"A1863"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"10,2",
+            "name":"iPhone 8 Plus",
+            "year introduced":2017,
+            "capacity":[64,128,256],
+            "color":["Gold","Silver","Space Gray","(PRODUCT)RED"],
+            "model":[{"United States":["A1864","A1897"]},{"Japan":"A1898"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"9,1",
+            "name":"iPhone 7",
+            "year introduced":2016,
+            "capacity":[32,128,256],
+            "color":["Black","Jet Black","Gold","Rose Gold","Silver","(PRODUCT)RED"],
+            "model":[{"United States":["A1660","A1778"]},{"Japan":"A1779"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"9,2",
+            "name":"iPhone 7 Plus",
+            "year introduced":2016,
+            "capacity":[32,128,256],
+            "color":["Black","Jet Black","Gold","Rose Gold","Silver","(PRODUCT)RED"],
+            "model":[{"United States":["A1661","A1784"]},{"Japan":"A1785"}],
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"8,1",
+            "name":"iPhone 6s",
+            "year introduced":2015,
+            "capacity":[16,32,64,128],
+            "color":["Space Gray","Gold","Rose Gold","Silver"],
+            "model":{"United States":["A1633","A1688","A1700"]},
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"8,2",
+            "name":"iPhone 6s Plus",
+            "year introduced":2015,
+            "capacity":[16,32,64,128],
+            "color":["Space Gray","Gold","Rose Gold","Silver"],
+            "model":{"United States":["A1634","A1687","A1699"]},
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"7,2",
+            "name":"iPhone 6",
+            "year introduced":2014,
+            "capacity":[16,32,64,128],
+            "color":["Space Gray","Gold","Rose Gold","Silver"],
+            "model":{"United States":["A1549","A1586","A1589"]},
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"7,1",
+            "name":"iPhone 6 Plus",
+            "year introduced":2014,
+            "capacity":[16,32,64,128],
+            "color":["Space Gray","Gold","Rose Gold","Silver"],
+            "model":{"United States":["A1522","A1524","A1593"]},
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        },
+        {
+            "id":"8,4",
+            "name":"iPhone SE (1st Generation)",
+            "year introduced":2016,
+            "capacity":[16,32,64,128],
+            "color":["Space Gray","Gold","Rose Gold","Silver"],
+            "model":{"United States":["A1723","A1662","A1724"]},
+            "repair":["Display","Camera","Battery","Speaker","Taptic Engine"]
+        }
+    ]
+}

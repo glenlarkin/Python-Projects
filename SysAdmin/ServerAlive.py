@@ -16,7 +16,7 @@ with open('SysAdmin/apwServers.csv') as csvfile:
         ipAddr = column[0]
 
         # Ping each server
-        response = os.system('ping ' + ipAddr)
+        response = os.system('ping -c 4 ' + ipAddr)
         if response == 0:
             print(response)
             output += ipAddr + ' is up :)\n'
