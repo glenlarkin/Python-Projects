@@ -13,3 +13,5 @@ while True:
         result = float(num) * x
         print(num + ' X ' + str(x) +' = ' + str(result))
         print('-'*15)
+    print('Hit ctrl-c to quit, I hope you acheive your gains!!!')
+    print('')
