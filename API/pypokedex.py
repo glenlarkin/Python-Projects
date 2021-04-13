@@ -1,3 +1,3 @@
 import pypokedex
-p = pypokedex.get(name = 'Garchomp')
+p = pypokedex.get(dex = 45)
 print(p.name)
