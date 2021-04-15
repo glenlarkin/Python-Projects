@@ -1,4 +1,4 @@
-import cryptocompare, time
+import cryptocompare, time, emoji
 
 doge = 'DOGE'
 usd = 'USD'
@@ -21,4 +21,5 @@ while True:
     if price < 0.09:
         print('doge: ' + str(price) + ' is less than 9 cents!')
     else:
-        print('doge: ' + "{:.3f}".format(price) + ' is more than 9 cents :(')
+        print('doge: ' + "{:.3f}".format(price) + ' is more than 9 cents ')
+        print(emoji.emojize('Python is :thumbs_up:'))
