@@ -4,6 +4,9 @@ doge = 'DOGE'
 usd = 'USD'
 
 while True:
+    print("Doge to the Moon")
+    time.sleep(3)
+    
     query = cryptocompare.get_price(doge, usd)
 
     
@@ -22,4 +25,4 @@ while True:
         print('doge: ' + str(price) + ' is less than 9 cents!')
     else:
         print('doge: ' + "{:.3f}".format(price) + ' is more than 9 cents ')
-        print(emoji.emojize('Python is :thumbs_up:'))
+        
