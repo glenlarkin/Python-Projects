@@ -2,13 +2,13 @@ import cryptocompare, time, emoji
 
 doge = 'DOGE'
 usd = 'USD'
+boughtPrice = 0.139
 
 while True:
-    print("Doge to the Moon")
+    print(emoji.emojize("Doge to the Moon :dog:"))
     time.sleep(3)
     
     query = cryptocompare.get_price(doge, usd)
-
     
     try:
         price = query[doge][usd]
@@ -21,8 +21,12 @@ while True:
             if type(price) == None:
                 print('now youre really fucked')
                 query = cryptocompare.get_price(doge, usd)
-    if price < 0.09:
-        print('doge: ' + str(price) + ' is less than 9 cents!')
+
+    difference = price - boughtPrice
+    percent = difference/boughtPrice*100
+
+    if price > boughtPrice:
+        print('DogeCoin: ' + str(price) + ' is up! ' + "{:.2f}".format(percent) + ' Percent Gained')
     else:
-        print('doge: ' + "{:.3f}".format(price) + ' is more than 9 cents ')
+        print('doge: ' + str(price) + ' is down! ' + "{:.2f}".format(-percent) + ' Percent Lost')
         
