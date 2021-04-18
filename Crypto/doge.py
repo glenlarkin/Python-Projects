@@ -9,7 +9,7 @@ while True:
     time.sleep(3)
     
     query = cryptocompare.get_price(doge, usd)
-    
+    print(emoji.emojize(":"))
     try:
         price = query[doge][usd]
     except:
