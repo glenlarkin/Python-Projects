@@ -1,12 +1,14 @@
-import requests, time
+import requests, time, datetime
 
 def checkInternet():
-
+    currentTime = datetime.datetime.now()
+    
     try:
         r = requests.get('https://api.github.com/events')
-        print("Connected")
+        print(str(currentTime) + " Connected")
     except:
-        print('No Internet')
+        print(str(currentTime) + ' No Internet')
+        down += 1
 
 while True:
     checkInternet()
