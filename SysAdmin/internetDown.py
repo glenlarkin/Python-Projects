@@ -1,4 +1,5 @@
 import requests, time, datetime
+down = 0
 
 def checkInternet():
     currentTime = datetime.datetime.now()
