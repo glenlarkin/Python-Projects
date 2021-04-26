@@ -1,26 +1,26 @@
 import requests, time, datetime, signal
 
-down = 0
-totalDown = 0
+downTime = 0
+totalDownTime = 0
 increment = 2
 
 def signal_handler(signum, frame):
     raise Exception(internetDown())
 
 def internetUp():
-    global down
-    down = 0
+    global downTime
+    downTime = 0
     print('Internet is Up')
 
 def internetDown():
-    global down
-    down += increment
-    global totalDown
-    totalDown += increment
-    downTime = 'Current Downtime: ' + str(down) + ' seconds\nTotal Downtime: ' + str(totalDown) + ' seconds\n-------------------------------------'
-    print(downTime)
+    global downTime
+    downTime += increment
+    global totalDownTime
+    totalDownTime += increment
+    downTimeMsg = 'Current Downtime: ' + str(downTime) + ' seconds\nTotal Downtime: ' + str(totalDownTime) + ' seconds\n-------------------------------------'
+    print(downTimeMsg)
     log = open("InternetLog.txt", "a")
-    log.write(downTime)
+    log.write(downTimeMsg)
     log.close()
 
 def checkInternet():
@@ -45,7 +45,7 @@ def writeLog():
     
 while True:
     signal.signal(signal.SIGALRM, signal_handler)
-    signal.alarm(increment)   
+    signal.alarm(5)   
     try:
         checkInternet()
     except:
