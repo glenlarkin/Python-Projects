@@ -1,4 +1,5 @@
 import requests, time, datetime
+
 down = 0
 
 def checkInternet():
@@ -8,9 +9,12 @@ def checkInternet():
         r = requests.get('https://api.github.com/events')
         print(str(currentTime) + " Connected")
     except:
+        log = open("InternetLog.txt", "a")
+        log.write(str(currentTime) + ' No Internet\n')
+        log.close()
         print(str(currentTime) + ' No Internet')
-        down += 1
+        
 
 while True:
     checkInternet()
-    time.sleep(5)
+    time.sleep(20)
