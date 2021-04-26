@@ -8,3 +8,4 @@ token.json
 AutoEmail/install.py
 AutoEmail/recipients.json
 Crypto/wallet.py
+InternetLog.txt
