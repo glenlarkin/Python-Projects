@@ -1,28 +1,35 @@
-import requests, time, datetime
+import requests, time, datetime, signal
 
-url = 'https://comcast.com'
+down = 0
 
+def signal_handler(signum, frame):
+    raise Exception("Timed out!")
 
 def checkInternet():
-    down = 0
+    print("starting checkinternet()")
+    print('getting date')
     currentTime = datetime.datetime.now()
     
     try:
-        r = requests.get(url)
-        print(str(currentTime) + " Connected")
+        print('trying comcast')
+        r = requests.get('https://api.github.com/events')
+        
     except:
+        print('exception caught')
         log = open("InternetLog.txt", "a")
         log.write(str(currentTime) + ' No Internet\n')
-        log.close()
         print(str(currentTime) + ' No Internet')
-        try:
-            r = requests.get(url)
-            print("Internet has come back")
-        except:
-            
-            down += 1
-        
+        print('right b4 log close')
+        log.close()
+        print('log has closed')
+    print('ending checkinternet()')
+
 
 while True:
-    checkInternet()
-    time.sleep(20)
+    signal.signal(signal.SIGALRM, signal_handler)
+    signal.alarm(10)   # Ten seconds
+    try:
+        checkInternet()
+    except:
+        print ("Timed out!")
+    time.sleep(2)
