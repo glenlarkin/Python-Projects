@@ -16,7 +16,11 @@ def internetDown():
     down += 2
     global totalDown
     totalDown += 2
-    print('Current Downtime: ' + str(down) + ' seconds\nTotal Downtime: ' + str(totalDown) + ' seconds')
+    downTime = 'Current Downtime: ' + str(down) + ' seconds\nTotal Downtime: ' + str(totalDown) + ' seconds\n-------------------------------------'
+    print(downTime)
+    log = open("InternetLog.txt", "a")
+    log.write(downTime)
+    log.close()
 
 def checkInternet():
     currentTime = datetime.datetime.now()
@@ -27,16 +31,20 @@ def checkInternet():
         
     except:
         log = open("InternetLog.txt", "a")
-        log.write(str(currentTime) + ' No Internet\n')
-        print(str(currentTime) + ' No Internet')
+        entry = '\n' + str(currentTime) + ' No Internet\n'
+        log.write(entry)
         log.close()
         
     if connected == '<Response [403]>' or '<Response [200]>':
         internetUp()
+
+def writeLog():
+    log = open("InternetLog.txt", "a")
+    log.write(entry)
     
 while True:
     signal.signal(signal.SIGALRM, signal_handler)
-    signal.alarm(10)   # Ten seconds
+    signal.alarm(5)   
     try:
         checkInternet()
     except:
