@@ -8,4 +8,6 @@ def checkInternet():
     except:
         print('No Internet')
 
-checkInternet()
+while True:
+    checkInternet()
+    time.sleep(5)
