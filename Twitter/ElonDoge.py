@@ -2,7 +2,7 @@ import twint
 
 # Configure
 c = twint.Config()
-c.Username = "elonmusk"
+c.Username = "whale_alert"
 c.Search = "DOGE"
 
 # Run
