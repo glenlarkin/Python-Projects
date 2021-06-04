@@ -1,4 +1,4 @@
-#! Python3
+#!usr/bin/python3
 # passwordGenerator.py - Creates random passwords, and then logs them
 
 import random, string, datetime
@@ -59,4 +59,6 @@ print('*'*25 + ' ' + str(currentTime) + ' New Passwords ' +  '*'*25)
 
 for passwd in devices:
     
-    print(passwd + ' is: ' + password(10,num=True,strength='strong'))
+    assignment = passwd + ' is: ' + password(10,num=True,strength='strong')
+    print(assignment)
+    writeLog
