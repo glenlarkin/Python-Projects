@@ -26,3 +26,8 @@ else:
         os.system('echo %s|sudo -S %s' % (sudo_password, command))
     else:
         print("Update Canceled")
+
+# TODO implement update logging
+
+# State time update was run
+# State what apps were updated
